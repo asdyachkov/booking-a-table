@@ -4,8 +4,30 @@
 Главная страница
 {% endblock %}
 
-{% block content %}
-<h1>Главная страница</h1>
+{% block main %}
+active
+{% endblock %}
 
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/main/css/index.css' %}">
+<div class="container">
+    <div class="right-block">
+        <h1 class="main-h1">Ресторан с авторской кухней, широкой барной картой и кальянами</h1>
+        <p><b>Стильное и уютное место</b> для отдыха в Москве на 100 персон с атмосферой, в которй будет комфортно каждому</p>
+        <div class="main-buttons">
+            <a href="/rent-a-table">
+                <div class="btn rent-button">
+                    <span>Забронировать стол</span>
+                </div>
+            </a>
+            <a href="/about">
+                <div class="btn about-button">
+                    <span>Подробнее о ресторане</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
