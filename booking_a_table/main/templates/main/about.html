@@ -1,5 +1,7 @@
 {% extends 'main/layout.html' %}
 
+{% load static %}
+
 {% block title %}
 О нас
 {% endblock %}
@@ -9,6 +11,11 @@ active
 {% endblock %}
 
 {% block content %}
+
+<link rel="stylesheet" href="{% static 'main/css/about.css' %}">
+<div class="container">
+    <h1>Мята Platinum — идеальное место для отдыха с качественным обслуживанием, едой и кальянами</h1>
+</div>
 
 {% endblock %}
 
