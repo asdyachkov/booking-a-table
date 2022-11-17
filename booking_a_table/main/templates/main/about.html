@@ -1,20 +1,121 @@
 {% extends 'main/layout.html' %}
 
-{% load static %}
 
 {% block title %}
 О нас
 {% endblock %}
 
+
 {% block about %}
 active
 {% endblock %}
 
+
 {% block content %}
 
+{% load static %}
 <link rel="stylesheet" href="{% static 'main/css/about.css' %}">
-<div class="container">
+
+<div class="container my-5">
+
     <h1>Мята Platinum — идеальное место для отдыха с качественным обслуживанием, едой и кальянами</h1>
+
+    <div class="two-cols">
+        <div class="col-item">
+            <h2>Премиальные кальяны</h2>
+            <p><b>Более 10 видов курительных смесей на любой вкус и крепость:</b> от Чабако до Танжирса.
+                <b>Только премиальные марки кальянов</b> Hoob и Geometria.</p>
+            <p>У каждого сотрудника нашей команды есть многолетний опыт в кальянном деле,
+                мы точно сможем забить то, что вам хочется, необычные новинки или старую добрую классику.</p>
+        </div>
+        <div class="col-item">
+            {% load static %}
+            <img src="{% static 'main/img/hookah.jpg' %}" alt="hookah">
+        </div>
+    </div>
+
+    <div class="two-cols">
+        <div class="col-item">
+            {% load static %}
+            <img src="{% static 'main/img/food.jpg' %}" alt="food">
+        </div>
+        <div class="col-item">
+            <h2>Блюда в авторском исполнении</h2>
+            <p><b>Угодим любым гастрономическим предпочтениям</b></p>
+            <p>Кухня предлагает итальянские пасты, салаты, бургеры, блюда японской кухни и многое другое.</p>
+            <a href="/menu">
+                <div class="btn rent-button">
+                    <span>Просмотреть наше меню</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="four-cols">
+        <div class="four-cols-item">
+            {% load static %}
+            <img src="{% static 'main/img/food-1.jpg' %}" alt="food">
+        </div>
+        <div class="four-cols-item">
+            {% load static %}
+            <img src="{% static 'main/img/food-2.jpg' %}" alt="food">
+        </div>
+        <div class="four-cols-item">
+            {% load static %}
+            <img src="{% static 'main/img/food-3.jpg' %}" alt="food">
+        </div>
+        <div class="four-cols-item">
+            {% load static %}
+            <img src="{% static 'main/img/food-4.jpg' %}" alt="food">
+        </div>
+    </div>
+
+    <div class="two-cols">
+        <div class="col-item">
+            <h2>Алкогольные напитки лучшего качества</h2>
+            <p>Бар с авторскими коктейлями, чаями, фруктовыми смузи. Наливаем более 17 видов вин и 10 видов алкогольных напитков разной крепости.</p>
+            <a href="/menu">
+                <div class="btn rent-button">
+                    <span>Просмотреть наше меню</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-item">
+            {% load static %}
+            <img src="{% static 'main/img/drinks.jpg' %}" alt="coctail">
+        </div>
+    </div>
+
+    <div class="four-cols">
+        <div class="four-cols-item">
+            {% load static %}
+            <img src="{% static 'main/img/drink-1.jpg' %}" alt="drink">
+        </div>
+        <div class="four-cols-item">
+            {% load static %}
+            <img src="{% static 'main/img/drink-2.jpg' %}" alt="drink">
+        </div>
+        <div class="four-cols-item">
+            {% load static %}
+            <img src="{% static 'main/img/drink-3.jpg' %}" alt="drink">
+        </div>
+        <div class="four-cols-item">
+            {% load static %}
+            <img src="{% static 'main/img/drink-4.jpg' %}" alt="drink">
+        </div>
+    </div>
+
+    <div class="two-cols">
+        <div class="col-item">
+            {% load static %}
+            <img src="{% static 'main/img/dj.png' %}" alt="dj">
+        </div>
+        <div class="col-item">
+            <h2>Частые выступления известных артистов и ди-джеев</h2>
+            <p>Мы часто приглашаем известных артистов Москвы и диджеев для вашего отдыха в кальянной.</p>
+        </div>
+    </div>
+
 </div>
 
 {% endblock %}

@@ -1,3 +1,118 @@
-*{
-    color: red;
+h1{
+    text-align: center;
+    margin: 0 auto 0 auto;
+    max-width: 80%;
+	color: #ffd700;
+}
+
+body{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/about-background.jpg") no-repeat repeat center center;
+}
+
+.two-cols{
+	margin-top: 10%;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	overflow: hidden;
+}
+.col-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	max-height: 300px;
+}
+.two-cols .col-item {
+	margin-right: 4%;
+}
+.col-item img{
+	width: 100%;
+	border-radius: 50px;
+}
+.col-item h2{
+	color: #ffd700;
+}
+
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+	margin-left: 5%;
+	margin-top: 3%;
+}
+.rent-button{
+    height: 70px;
+    width: 300px;
+    border: 2px #ffd700 solid;
+    border-radius: 10px;
+
+}
+.rent-button {
+    transition: all 0.3s;
+    position: relative;
+}
+.rent-button span {
+  transition: all 0.3s;
+    color: aliceblue;
+    text-decoration:none;
+}
+.rent-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,215,0,0.5);
+  border-bottom-color: rgba(255,215,0,0.5);
+  transform: scale(0.1, 1);
+}
+.rent-button:hover span {
+  letter-spacing: 2px;
+}
+.rent-button:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.rent-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.rent-button:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+.four-cols {
+    margin-top: 3%;
+    display: flex;
+}
+.four-cols-item{
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+}
+.four-cols-item img{
+    width: 60%;
 }
