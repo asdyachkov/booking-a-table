@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Salats, SideDishesAndSoups, HotDishes, Drinks
 
 
 def index(request):
@@ -10,7 +11,11 @@ def about(request):
 
 
 def menu(request):
-    return render(request, 'main/menu.html')
+    salats = Salats.objects.all()
+    sideDishesAndSoups = SideDishesAndSoups.objects.all()
+    hotDishes = HotDishes.objects.all()
+    drinks = Drinks.objects.all()
+    return render(request, 'main/menu.html', {'salats': salats, 'sideDishesAndSoups': sideDishesAndSoups, 'hotDishes': hotDishes, 'drinks': drinks})
 
 
 def rent_a_table(request):
