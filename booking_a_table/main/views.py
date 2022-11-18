@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Salats, SideDishesAndSoups, HotDishes, Drinks
+from .models import Salats, SideDishesAndSoups, HotDishes, Drinks, PhotoLinks
 from .forms import RentATableForm
 
 
@@ -39,4 +39,5 @@ def contacts(request):
 
 
 def gallery(request):
-    return render(request, 'main/gallery.html')
+    photos = PhotoLinks.objects.all()
+    return render(request, 'main/gallery.html', {'photos': photos})

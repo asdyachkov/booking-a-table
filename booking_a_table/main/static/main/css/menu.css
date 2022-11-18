@@ -2,7 +2,7 @@ h1{
     margin-top: 5%;
     padding: 20px 90px 20px 90px;
     text-align: center;
-    color: #ffd700;
+    color: #ab8e6c;
 }
 body{
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/about-background.jpg") no-repeat repeat center center;
@@ -101,6 +101,6 @@ body{
     width: 15%;
     border-radius: 10px;
     background: none;
-    color: #ffd700;
-    border-color: #ffd700;
+    color: #ab8e6c;
+    border-color: #ab8e6c;
 }

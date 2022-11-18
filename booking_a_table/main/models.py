@@ -70,3 +70,14 @@ class RentATable(models.Model):
     class Meta:
         verbose_name = 'Бронирования'
         verbose_name_plural = 'Бронирование'
+
+
+class PhotoLinks(models.Model):
+    link = models.CharField('Ссылка на фото', max_length=250)
+
+    def __str__(self):
+        return 'Ссылка'
+
+    class Meta:
+        verbose_name = 'Ссылки на фото'
+        verbose_name_plural = 'Ссылка на фото'
