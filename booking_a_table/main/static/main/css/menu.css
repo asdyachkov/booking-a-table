@@ -95,3 +95,12 @@ body{
     color: #ab8e6c;
     margin-right: 10%;
 }
+.print-button{
+    margin-left: 42.5%;
+    margin-right: 42.5%;
+    width: 15%;
+    border-radius: 10px;
+    background: none;
+    color: #ffd700;
+    border-color: #ffd700;
+}
