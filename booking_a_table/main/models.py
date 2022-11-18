@@ -8,7 +8,7 @@ class Salats(models.Model):
     photo = models.TextField('Ссылка на изображение', blank=True)
 
     def __str__(self):
-        return 'Салаты'
+        return self.title
 
     class Meta:
         verbose_name = 'Салат'
@@ -22,7 +22,7 @@ class HotDishes(models.Model):
     photo = models.TextField('Ссылка на изображение', blank=True)
 
     def __str__(self):
-        return 'Горячие блюда'
+        return self.title
 
     class Meta:
         verbose_name = 'Горячие блюда'
@@ -36,7 +36,7 @@ class SideDishesAndSoups(models.Model):
     photo = models.TextField('Ссылка на изображение', blank=True)
 
     def __str__(self):
-        return 'Гарниры и супы'
+        return self.title
 
     class Meta:
         verbose_name = 'Гарниры и супы'
@@ -50,8 +50,23 @@ class Drinks(models.Model):
     photo = models.TextField('Ссылка на изображение', blank=True)
 
     def __str__(self):
-        return 'Напитки'
+        return self.title
 
     class Meta:
         verbose_name = 'Напитки'
         verbose_name_plural = 'Напиток'
+
+
+class RentATable(models.Model):
+    client_name = models.CharField('Имя клиента', max_length=100)
+    clients_count = models.IntegerField('Количество гостей')
+    date = models.DateField('Дата прихода гостей')
+    time = models.TimeField('Время прихода гостей')
+    phone_number = models.CharField('Имя клиента', max_length=16)
+
+    def __str__(self):
+        return self.phone_number
+
+    class Meta:
+        verbose_name = 'Бронирования'
+        verbose_name_plural = 'Бронирование'

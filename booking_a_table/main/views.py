@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Salats, SideDishesAndSoups, HotDishes, Drinks
+from .forms import RentATableForm
 
 
 def index(request):
@@ -19,7 +20,18 @@ def menu(request):
 
 
 def rent_a_table(request):
-    return render(request, 'main/rent_a_table.html')
+    error = ''
+    if request.method == 'POST':
+        form = RentATableForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+        else:
+            error = 'Форма заполнена неверно'
+
+    form = RentATableForm()
+    data = {'form': form, 'error': error}
+    return render(request, 'main/rent_a_table.html', data)
 
 
 def contacts(request):

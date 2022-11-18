@@ -1,0 +1,172 @@
+input,
+output {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+}
+
+output {
+  background: #ffd700;
+  padding: 5px 16px;
+  border-radius: 3px;
+  color: black;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 80%;
+  height: 5px;
+  border-radius: 5px;
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Input Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #ffd700;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #ffd700;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+}
+
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #ffd700;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+}
+
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+a {
+    text-decoration:none;
+    color: aliceblue;
+}
+.rent-button{
+    height: 70px;
+    width: 300px;
+    border: 2px #ffd700 solid;
+    border-radius: 10px;
+
+}
+.rent-button {
+    transition: all 0.3s;
+    position: relative;
+}
+.rent-button span {
+  transition: all 0.3s;
+    color: aliceblue;
+    text-decoration:none;
+}
+.rent-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,215,0,0.5);
+  border-bottom-color: rgba(255,215,0,0.5);
+  transform: scale(0.1, 1);
+}
+.rent-button:hover span {
+  letter-spacing: 2px;
+}
+.rent-button:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.rent-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.rent-button:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+h1{
+    color: #ffd700;
+}
+body{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/background_image.jpg") no-repeat repeat center center;
+    background-size: 100%;
+}
+.text-col h1{
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+.text-col p{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    max-width: 80%;
+}
+.form-style{
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: -20%;
+    margin-top: -15%;
+    border-radius: 20px;
+    margin-left: 10%;
+    width: 85%;
+    padding: 3% 7% 3% 7%;
+}
+.form-style .rent-button{
+    margin-top: 5%;
+    height: 10%;
+    width: 40%;
+    padding: 0;
+}
+.form-style h5{
+    margin-top: 3%;
+    font-weight: lighter;
+}
+.text-input{
+    border-radius: 10px;
+    width: 85%;
+    height: 42px;
+    border: none;
+    padding-left: 5%;
+    padding-right: 3%;
+    font-weight: lighter;
+}

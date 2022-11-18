@@ -9,8 +9,48 @@ active
 {% endblock %}
 
 {% block content %}
+
 {% load static %}
 <link rel="stylesheet" href="{% static 'main/css/rent_a_table.css' %}">
+<script src="{% static 'main/js/rent_a_table.js' %}"></script>
+
+<div class="container">
+    <div class="row row-cols-2" style="margin-top: 15%; margin-left: 7%;">
+        <div class="col text-col">
+            <h1>Забронируйте место в зале прямо сейчас!</h1>
+            <p>Уютные зоны с игровой приставкой PS5, самые рейтинговые игры, множество разнообразных настольных игр,
+                в том числе и нарды, для весёлого времяпрепровождения вместе с друзьями, а так же трансляции самых
+                топовых спортивных событий в мире.</p>
+            <a href="/menu">
+                <div class="btn rent-button">
+                    <span>Просмотреть наше меню</span>
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <form method="post" class="form-style">
+                {% csrf_token %}
+                <h5>Введите Ваше имя*</h5>
+                {{form.client_name}}
+                <h5>Выберите количество гостей*</h5>
+
+                {{form.clients_count}}
+                <output id="rangevalue">1</output>
+
+                <h5>Выберите дату посещения*</h5>
+                {{form.date}}
+                <h5>Напишите примерное время посещения*</h5>
+                {{form.time}}
+                <h5>Введите Ваш номер телефона*</h5>
+                {{form.phone_number}}
+                <button class="btn rent-button" type="submit">
+                    <span>Забронировать</span>
+                </button>
+                <span>{{ error }}</span>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 
