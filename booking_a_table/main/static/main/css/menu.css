@@ -1,0 +1,106 @@
+h1{
+    margin-top: 5%;
+    padding: 20px 90px 20px 90px;
+    text-align: center;
+    color: #ab8e6c;
+}
+body{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/about-background.jpg") no-repeat repeat center center;
+    background-size: 100%;
+}
+.main-border{
+    border: darkgray medium solid;
+    padding: 1%;
+    margin-top: 5%;
+}
+.forborder{
+    border: grey medium solid;
+}
+.food-with-photo{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+    height: 300px;
+    margin-bottom: 10%;
+}
+.food-with-photo-item img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50px;
+}
+.food-with-photo-item{
+    display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+    width: 50%;
+}
+.food-with-photo-text{
+    display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+    width: 50%;
+    margin-left: 10%;
+    border-top: white medium solid;
+    border-bottom: white medium solid;
+    border-left: white medium solid;
+    height: 85%;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    margin-top: 2%;
+}
+.food-with-photo-text h2{
+    margin-top: 4%;
+    margin-left: 10%;
+    padding: 0;
+}
+.food-with-photo-text h3{
+    color: #ab8e6c;
+    margin-left: 55%;
+}
+.food-with-photo-text h4{
+    color: #ab8e6c;
+    margin-left: 70%;
+}
+.food-without-photo-left{
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 50%;
+    margin-bottom: 5%;
+}
+.food-without-photo-left h3{
+    color: #ab8e6c;
+    margin-left: 25%;
+}
+.food-without-photo-left h4{
+    color: #ab8e6c;
+    margin-left: 30%;
+}
+.food-without-photo-right{
+    text-align: right;
+    margin-right: 10%;
+    margin-top: 5%;
+    width: 50%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+}
+.food-without-photo-right h3{
+    color: #ab8e6c;
+    margin-right: 15%;
+}
+.food-without-photo-right h4{
+    color: #ab8e6c;
+    margin-right: 10%;
+}
+.print-button{
+    margin-left: 42.5%;
+    margin-right: 42.5%;
+    width: 15%;
+    border-radius: 10px;
+    background: none;
+    color: #ab8e6c;
+    border-color: #ab8e6c;
+}

@@ -1,0 +1,157 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Наше меню
+{% endblock %}
+
+{% block menu %}
+active
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
+<h1>Меню Мята</h1>
+<button onclick="window.print()" class="print-button">Распечатать меню</button>
+<div class="container main-border">
+    <div class="forborder">
+
+        <h1>Салаты</h1>
+        {% for item in salats %}
+            {% if item.photo != '' %}
+                <div class="food-with-photo">
+                    <div class="food-with-photo-text">
+                        {% filter upper %}
+                            <h2>{{item.title}}</h2>
+                        {% endfilter %}
+                        <h3>{{item.weight}}г.</h3>
+                        <h4>{{item.cost}}.-</h4>
+                    </div>
+                    <div class="food-with-photo-item">
+                        <img src="{{item.photo}}" alt="">
+                    </div>
+                </div>
+            {% elif item.id == 0 or item.id == 2 or item.id == 4 or item.id == 6 or item.id == 8 or item.id == 10 or item.id == 12 or item.id == 14 or item.id == 16 or item.id == 18 or item.id == 20 %}
+                <div class="food-without-photo-left">
+                    {% filter upper %}
+                        <h2>{{item.title}}</h2>
+                    {% endfilter %}
+                    <h3>{{item.weight}}г.</h3>
+                    <h4>{{item.cost}}-.</h4>
+                </div>
+            {% else %}
+                <div class="food-without-photo-right">
+                    {% filter upper %}
+                        <h2>{{item.title}}</h2>
+                    {% endfilter %}
+                    <h3>{{item.weight}}г.</h3>
+                    <h4>{{item.cost}}-.</h4>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1>Супы и гарниры</h1>
+        {% for item in sideDishesAndSoups %}
+            {% if item.photo != '' %}
+                <div class="food-with-photo">
+                    <div class="food-with-photo-text">
+                        {% filter upper %}
+                            <h2>{{item.title}}</h2>
+                        {% endfilter %}
+                        <h3>{{item.weight}}г.</h3>
+                        <h4>{{item.cost}}.-</h4>
+                    </div>
+                    <div class="food-with-photo-item">
+                        <img src="{{item.photo}}" alt="">
+                    </div>
+                </div>
+            {% elif item.id == 0 or item.id == 2 or item.id == 4 or item.id == 6 or item.id == 8 or item.id == 10 or item.id == 12 or item.id == 14 or item.id == 16 or item.id == 18 or item.id == 20 %}
+                <div class="food-without-photo-left">
+                    {% filter upper %}
+                        <h2>{{item.title}}</h2>
+                    {% endfilter %}
+                    <h3>{{item.weight}}г.</h3>
+                    <h4>{{item.cost}}-.</h4>
+                </div>
+            {% else %}
+                <div class="food-without-photo-right">
+                    {% filter upper %}
+                        <h2>{{item.title}}</h2>
+                    {% endfilter %}
+                    <h3>{{item.weight}}г.</h3>
+                    <h4>{{item.cost}}-.</h4>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1>Горячие блюда</h1>
+        {% for item in hotDishes %}
+            {% if item.photo != '' %}
+                <div class="food-with-photo">
+                    <div class="food-with-photo-text">
+                        {% filter upper %}
+                            <h2>{{item.title}}</h2>
+                        {% endfilter %}
+                        <h3>{{item.weight}}г.</h3>
+                        <h4>{{item.cost}}.-</h4>
+                    </div>
+                    <div class="food-with-photo-item">
+                        <img src="{{item.photo}}" alt="">
+                    </div>
+                </div>
+            {% elif item.id == 0 or item.id == 2 or item.id == 4 or item.id == 6 or item.id == 8 or item.id == 10 or item.id == 12 or item.id == 14 or item.id == 16 or item.id == 18 or item.id == 20 %}
+                <div class="food-without-photo-left">
+                    {% filter upper %}
+                        <h2>{{item.title}}</h2>
+                    {% endfilter %}
+                    <h3>{{item.weight}}г.</h3>
+                    <h4>{{item.cost}}-.</h4>
+                </div>
+            {% else %}
+                <div class="food-without-photo-right">
+                    {% filter upper %}
+                        <h2>{{item.title}}</h2>
+                    {% endfilter %}
+                    <h3>{{item.weight}}г.</h3>
+                    <h4>{{item.cost}}-.</h4>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1>Напитки</h1>
+        {% for item in drinks %}
+            {% if item.photo != '' %}
+                <div class="food-with-photo">
+                    <div class="food-with-photo-text">
+                        {% filter upper %}
+                            <h2>{{item.title}}</h2>
+                        {% endfilter %}
+                        <h3>{{item.weight}}г.</h3>
+                        <h4>{{item.cost}}.-</h4>
+                    </div>
+                    <div class="food-with-photo-item">
+                        <img src="{{item.photo}}" alt="">
+                    </div>
+                </div>
+            {% elif item.id == 0 or item.id == 2 or item.id == 4 or item.id == 6 or item.id == 8 or item.id == 10 or item.id == 12 or item.id == 14 or item.id == 16 or item.id == 18 or item.id == 20 %}
+                <div class="food-without-photo-left">
+                    {% filter upper %}
+                        <h2>{{item.title}}</h2>
+                    {% endfilter %}
+                    <h3>{{item.weight}}г.</h3>
+                    <h4>{{item.cost}}-.</h4>
+                </div>
+            {% else %}
+                <div class="food-without-photo-right">
+                    {% filter upper %}
+                        <h2>{{item.title}}</h2>
+                    {% endfilter %}
+                    <h3>{{item.weight}}г.</h3>
+                    <h4>{{item.cost}}-.</h4>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

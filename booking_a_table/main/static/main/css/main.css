@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: #F4A900 url("../img/background_image.jpg") no-repeat center center;
+    background-size: cover;
+    color: aliceblue;
+}
+footer{
+    flex-shrink: 0;
+    padding-top: 10px;
+}
+.border-top{
+    padding-top: 10px;
+    margin: 10px;
+}
+.content{
+    margin: 0 auto;
+    flex-grow: 1;
+}
+.nav-link{
+    color: aliceblue !important;
+    background: none !important;
+}
+.nav-link:hover{
+    color: #ffd700 !important;
+}
+.active{
+    border-bottom: medium solid #ffd700 !important;
+    padding-bottom: 3px;
+}

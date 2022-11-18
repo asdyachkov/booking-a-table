@@ -1,0 +1,133 @@
+h1{
+    font-size: 60px;
+    font-weight: normal;
+}
+a {
+    text-decoration:none;
+    color: aliceblue;
+}
+.right-block{
+    margin-top: 15%;
+    max-width: 60%;
+}
+.right-block p{
+    max-width: 70%;
+    font-size: 20px;
+    margin-top: 3%;
+}
+.main-buttons{
+    width: 100%;
+    margin-top: 3%;
+}
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+.rent-button, .about-button{
+    height: 70px;
+    width: 300px;
+    border: 2px #ab8e6c solid;
+    border-radius: 10px;
+
+}
+.rent-button, .about-button {
+    transition: all 0.3s;
+    position: relative;
+}
+.rent-button span {
+  transition: all 0.3s;
+    color: aliceblue;
+    text-decoration:none;
+}
+.rent-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,215,0,0.5);
+  border-bottom-color: rgba(255,215,0,0.5);
+  transform: scale(0.1, 1);
+}
+.rent-button:hover span {
+  letter-spacing: 2px;
+}
+.rent-button:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.rent-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.rent-button:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+
+.about-button span {
+  transition: all 0.3s;
+    color: aliceblue;
+    text-decoration:none;
+}
+.about-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,215,0,0.5);
+  border-bottom-color: rgba(255,215,0,0.5);
+  transform: scale(0.1, 1);
+}
+.about-button:hover span {
+  letter-spacing: 2px;
+}
+.about-button:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.about-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.about-button:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
