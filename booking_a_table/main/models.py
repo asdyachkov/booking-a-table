@@ -13,6 +13,7 @@ class Salats(models.Model):
     class Meta:
         verbose_name = 'Салат'
         verbose_name_plural = 'Салаты'
+        ordering = ['title', 'weight', 'cost']
 
 
 class HotDishes(models.Model):
@@ -25,8 +26,9 @@ class HotDishes(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = 'Горячие блюда'
-        verbose_name_plural = 'Горячее блюдо'
+        verbose_name = 'Горячее блюдо'
+        verbose_name_plural = 'Горячие блюда'
+        ordering = ['title', 'weight', 'cost']
 
 
 class SideDishesAndSoups(models.Model):
@@ -39,8 +41,9 @@ class SideDishesAndSoups(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = 'Гарниры и супы'
-        verbose_name_plural = 'Гарнир или суп'
+        verbose_name = 'Гарнир или суп'
+        verbose_name_plural = 'Гарниры и супы'
+        ordering = ['title', 'weight', 'cost']
 
 
 class Drinks(models.Model):
@@ -53,8 +56,9 @@ class Drinks(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = 'Напитки'
-        verbose_name_plural = 'Напиток'
+        verbose_name = 'Напиток'
+        verbose_name_plural = 'Напитки'
+        ordering = ['title', 'weight', 'cost']
 
 
 class RentATable(models.Model):
@@ -62,14 +66,15 @@ class RentATable(models.Model):
     clients_count = models.IntegerField('Количество гостей')
     date = models.DateField('Дата прихода гостей')
     time = models.TimeField('Время прихода гостей')
-    phone_number = models.CharField('Имя клиента', max_length=16)
+    phone_number = models.CharField('Номер телефона клиента', max_length=16)
 
     def __str__(self):
         return self.phone_number
 
     class Meta:
-        verbose_name = 'Бронирования'
-        verbose_name_plural = 'Бронирование'
+        verbose_name = 'Бронирование'
+        verbose_name_plural = 'Бронирования'
+        ordering = ['client_name', 'clients_count', 'date', 'time']
 
 
 class PhotoLinks(models.Model):
@@ -79,5 +84,5 @@ class PhotoLinks(models.Model):
         return 'Ссылка'
 
     class Meta:
-        verbose_name = 'Ссылки на фото'
-        verbose_name_plural = 'Ссылка на фото'
+        verbose_name = 'Ссылка на фото'
+        verbose_name_plural = 'Ссылки на фото'
