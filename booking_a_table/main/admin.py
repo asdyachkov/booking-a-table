@@ -1,11 +1,12 @@
 from django.contrib import admin
 from django.contrib.admin import AdminSite
 from django.utils.safestring import mark_safe
+from modeltranslation.admin import TranslationAdmin
 
 from .models import Salats, HotDishes, SideDishesAndSoups, Drinks, RentATable, PhotoLinks
 
 
-class SalatsAdmin(admin.ModelAdmin):
+class SalatsAdmin(TranslationAdmin):
     list_display = ('title', 'weight', 'cost', 'get_html_photo')
     list_display_links = ('title', 'get_html_photo')
     search_fields = ('title', 'cost')
@@ -21,7 +22,7 @@ class SalatsAdmin(admin.ModelAdmin):
     get_html_photo.short_description = "Изображение"
 
 
-class HotDishesAdmin(admin.ModelAdmin):
+class HotDishesAdmin(TranslationAdmin):
     list_display = ('title', 'weight', 'cost', 'get_html_photo')
     list_display_links = ('title', 'get_html_photo')
     search_fields = ('title', 'cost')
@@ -45,7 +46,7 @@ class RentATableAdmin(admin.ModelAdmin):
     list_filter = ('clients_count', 'date')
 
 
-class SideDishesAndSoupsAdmin(admin.ModelAdmin):
+class SideDishesAndSoupsAdmin(TranslationAdmin):
     list_display = ('title', 'weight', 'cost', 'get_html_photo')
     list_display_links = ('title', 'get_html_photo')
     search_fields = ('title', 'cost')
@@ -61,7 +62,7 @@ class SideDishesAndSoupsAdmin(admin.ModelAdmin):
     get_html_photo.short_description = "Изображение"
 
 
-class DrinksAdmin(admin.ModelAdmin):
+class DrinksAdmin(TranslationAdmin):
     list_display = ('title', 'weight', 'cost', 'get_html_photo')
     list_display_links = ('title', 'get_html_photo')
     search_fields = ('title', 'cost')

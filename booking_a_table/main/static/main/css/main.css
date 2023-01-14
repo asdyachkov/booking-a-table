@@ -30,3 +30,21 @@ footer{
     border-bottom: medium solid #ffd700 !important;
     padding-bottom: 3px;
 }
+.go-button{
+    background: none;
+    border: thin solid #ffd700 !important;
+    color: aliceblue;
+}
+.choose-language{
+    justify-content: center;
+    margin-top: 1%;
+}
+.go-button:hover{
+    color: #ffd700 !important;
+}
+.choose-language-select{
+    background: none;
+    border: thin solid #ffd700 !important;
+    color: aliceblue;
+}
+

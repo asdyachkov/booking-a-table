@@ -25,8 +25,8 @@ body{
     margin-bottom: 10%;
 }
 .food-with-photo-item img{
-    height: 400px;
-    width: 400px;
+    max-height: 300px;
+    max-width: 300px;
     border-radius: 50px;
 }
 .food-with-photo-item{
@@ -64,36 +64,20 @@ body{
     color: #ab8e6c;
     margin-left: 70%;
 }
-.food-without-photo-left{
-    text-align: left;
-    margin-left: 10%;
+.food-without-photo{
+    text-align: center;
+    display: block;
     margin-top: 5%;
-    width: 50%;
+    width: 100%;
     margin-bottom: 5%;
 }
-.food-without-photo-left h3{
+.food-without-photo h3{
     color: #ab8e6c;
-    margin-left: 25%;
+    margin-left: 35%;
 }
-.food-without-photo-left h4{
+.food-without-photo h4{
     color: #ab8e6c;
-    margin-left: 30%;
-}
-.food-without-photo-right{
-    text-align: right;
-    margin-right: 10%;
-    margin-top: 5%;
-    width: 50%;
     margin-left: 40%;
-    margin-bottom: 5%;
-}
-.food-without-photo-right h3{
-    color: #ab8e6c;
-    margin-right: 15%;
-}
-.food-without-photo-right h4{
-    color: #ab8e6c;
-    margin-right: 10%;
 }
 .print-button{
     margin-left: 42.5%;

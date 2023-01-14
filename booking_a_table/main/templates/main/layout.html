@@ -14,15 +14,33 @@
     <link rel="stylesheet" href="{% static '/main/css/main.css' %}">
 </head>
 <body>
-
+{% load i18n %}
     <header class="container">
         <div class="d-flex justify-content-center py-3">
           <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/" class="nav-link {% block main %}{% endblock %}">Home</a></li>
-            <li class="nav-item"><a href="/about" class="nav-link {% block about %}{% endblock %}">About us</a></li>
-            <li class="nav-item"><a href="/menu" class="nav-link {% block menu %}{% endblock %}">Menu</a></li>
-            <li class="nav-item"><a href="/rent_a_table" class="nav-link {% block rent_a_table %}{% endblock %}">Rent a table</a></li>
-              <li class="nav-item"><a href="/gallery" class="nav-link {% block gallery %}{% endblock %}">Gallery</a></li>
+            <li class="nav-item"><a href="/" class="nav-link {% block main %}{% endblock %}">{% trans 'Home' %}</a></li>
+            <li class="nav-item"><a href="/about" class="nav-link {% block about %}{% endblock %}">{% trans 'About' %}</a></li>
+            <li class="nav-item"><a href="/menu" class="nav-link {% block menu %}{% endblock %}">{% trans 'Menu' %}</a></li>
+            <li class="nav-item"><a href="/rent_a_table" class="nav-link {% block rent_a_table %}{% endblock %}">{% trans 'Book a table' %}</a></li>
+              <li class="nav-item"><a href="/gallery" class="nav-link {% block gallery %}{% endblock %}">{% trans 'Gallery' %}</a></li>
+              <li class="choose-language">
+
+
+                    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                        <input name="next" type="hidden" value="{{ redirect_to }}">
+                        <select name="language" class="choose-language-select">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option style="color: black" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="Go" class="go-button">
+                    </form>
+              </li>
           </ul>
         </div>
     </header>

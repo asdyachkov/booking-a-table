@@ -14,19 +14,18 @@ active
 {% block content %}
 
 {% load static %}
+{% load i18n %}
 <link rel="stylesheet" href="{% static 'main/css/about.css' %}">
 
 <div class="container my-5">
 
-    <h1>Мята Platinum — идеальное место для отдыха с качественным обслуживанием, едой и кальянами</h1>
+    <h1>{% trans 'Mint Platinum is an ideal place to relax with quality service, food and hookahs' %}</h1>
 
     <div class="two-cols">
         <div class="col-item">
-            <h2>Премиальные кальяны</h2>
-            <p><b>Более 10 видов курительных смесей на любой вкус и крепость:</b> от Чабако до Танжирса.
-                <b>Только премиальные марки кальянов</b> Hoob и Geometria.</p>
-            <p>У каждого сотрудника нашей команды есть многолетний опыт в кальянном деле,
-                мы точно сможем забить то, что вам хочется, необычные новинки или старую добрую классику.</p>
+            <h2>{% trans 'Premium hookahs' %}</h2>
+            <p>{% trans 'More than 10 types of smoking mixtures for every taste and strength: from Chabako to Tangiers. Only premium brands of hookahs Hoob and Geometria.' %}</p>
+            <p>{% trans 'Each employee of our team has many years of experience in the hookah business, we will definitely be able to score what you want, unusual novelties or good old classics.' %}</p>
         </div>
         <div class="col-item">
             {% load static %}
@@ -40,12 +39,12 @@ active
             <img src="{% static 'main/img/food.jpg' %}" alt="food">
         </div>
         <div class="col-item">
-            <h2>Блюда в авторском исполнении</h2>
-            <p><b>Угодим любым гастрономическим предпочтениям</b></p>
-            <p>Кухня предлагает итальянские пасты, салаты, бургеры, блюда японской кухни и многое другое.</p>
+            <h2>{% trans 'Dishes in the authors execution' %}</h2>
+            <p>{% trans 'We will please any gastronomic preferences' %}</p>
+            <p>{% trans 'The kitchen offers Italian pastas, salads, burgers, Japanese dishes and much more.' %}</p>
             <a href="/menu">
                 <div class="btn rent-button">
-                    <span>Просмотреть наше меню</span>
+                    <span>{% trans 'View our menu' %}</span>
                 </div>
             </a>
         </div>
@@ -72,11 +71,11 @@ active
 
     <div class="two-cols">
         <div class="col-item">
-            <h2>Алкогольные напитки лучшего качества</h2>
-            <p>Бар с авторскими коктейлями, чаями, фруктовыми смузи. Наливаем более 17 видов вин и 10 видов алкогольных напитков разной крепости.</p>
+            <h2>{% trans 'Alcoholic beverages of the best quality' %}</h2>
+            <p>{% trans 'A bar with original cocktails, teas, fruit smoothies. We pour more than 17 types of wines and 10 types of alcoholic beverages of different strength.' %}</p>
             <a href="/menu">
                 <div class="btn rent-button">
-                    <span>Просмотреть наше меню</span>
+                    <span>{% trans 'View our menu' %}</span>
                 </div>
             </a>
         </div>
@@ -111,8 +110,8 @@ active
             <img src="{% static 'main/img/dj.png' %}" alt="dj">
         </div>
         <div class="col-item">
-            <h2>Частые выступления известных артистов и ди-джеев</h2>
-            <p>Мы часто приглашаем известных артистов Москвы и диджеев для вашего отдыха в кальянной.</p>
+            <h2>{% trans 'Frequent performances by famous artists and DJs' %}в</h2>
+            <p>{% trans 'We often invite famous Moscow artists and DJs for your holiday in a hookah bar.' %}</p>
         </div>
     </div>
 
@@ -124,12 +123,12 @@ active
         </div>
         <div class="address-block">
             <h2>Мята Platinum</h2>
-            <h3>Наши контакты</h3>
-            <h4>Адрес:</h4>
-            <p>Москва, м. Дубровка <br>ул. 1-я Машиностроения 10, эт.2</p>
-            <h4>Режим работы:</h4>
-            <p>Вс-Чт 12:00-01:00 <br>Пт-Сб 12:00-03:00</p>
-            <h4>Телефон:</h4>
+            <h3>{% trans 'Our contacts' %}</h3>
+            <h4>{% trans 'Address:' %}</h4>
+            <p>{% trans 'Moscow, M. Dubrovka str. 1-ya Mashinostroeniya 10, fl.2' %}</p>
+            <h4>{% trans 'Operating mode' %}:</h4>
+            <p>{% trans 'Sun-Thu 12:00-01:00 Fri-Sat 12:00-03:00' %}</p>
+            <h4>{% trans 'Telephone:' %}</h4>
             <h3>+7(919)075-79-55</h3>
         </div>
     </div>

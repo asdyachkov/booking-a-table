@@ -1,11 +1,12 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class Salats(models.Model):
-    title = models.CharField('Название', max_length=100)
-    weight = models.IntegerField('Масса блюда')
-    cost = models.IntegerField('Стоимость блюда')
-    photo = models.TextField('Ссылка на изображение', blank=True)
+    title = models.CharField(verbose_name=_('Title'), max_length=100)
+    weight = models.IntegerField(verbose_name=_('Mass of the dish'))
+    cost = models.IntegerField(verbose_name=_('The cost of the dish'))
+    photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
 
     def __str__(self):
         return self.title
@@ -17,10 +18,10 @@ class Salats(models.Model):
 
 
 class HotDishes(models.Model):
-    title = models.CharField('Название', max_length=100)
-    weight = models.IntegerField('Масса блюда')
-    cost = models.IntegerField('Стоимость блюда')
-    photo = models.TextField('Ссылка на изображение', blank=True)
+    title = models.CharField(verbose_name=_('Title'), max_length=100)
+    weight = models.IntegerField(verbose_name=_('Mass of the dish'))
+    cost = models.IntegerField(verbose_name=_('The cost of the dish'))
+    photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
 
     def __str__(self):
         return self.title
@@ -32,10 +33,10 @@ class HotDishes(models.Model):
 
 
 class SideDishesAndSoups(models.Model):
-    title = models.CharField('Название', max_length=100)
-    weight = models.IntegerField('Масса блюда')
-    cost = models.IntegerField('Стоимость блюда')
-    photo = models.TextField('Ссылка на изображение', blank=True)
+    title = models.CharField(verbose_name=_('Title'), max_length=100)
+    weight = models.IntegerField(verbose_name=_('Mass of the dish'))
+    cost = models.IntegerField(verbose_name=_('The cost of the dish'))
+    photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
 
     def __str__(self):
         return self.title
@@ -47,10 +48,10 @@ class SideDishesAndSoups(models.Model):
 
 
 class Drinks(models.Model):
-    title = models.CharField('Название', max_length=100)
-    weight = models.IntegerField('Объем напитка')
-    cost = models.IntegerField('Стоимость напитка')
-    photo = models.TextField('Ссылка на изображение', blank=True)
+    title = models.CharField(verbose_name=_('Title'), max_length=100)
+    weight = models.IntegerField(verbose_name=_('Mass of the dish'))
+    cost = models.IntegerField(verbose_name=_('The cost of the dish'))
+    photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
 
     def __str__(self):
         return self.title

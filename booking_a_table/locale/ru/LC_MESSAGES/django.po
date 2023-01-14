@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-15 01:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\booking_a_table\settings.py:120
+msgid "Russian"
+msgstr "Русский"
+
+#: .\booking_a_table\settings.py:121
+msgid "English"
+msgstr "English"
+
+#: .\main\models.py:6 .\main\models.py:21 .\main\models.py:36
+#: .\main\models.py:51
+msgid "Title"
+msgstr "Название"
+
+#: .\main\models.py:7 .\main\models.py:22 .\main\models.py:37
+#: .\main\models.py:52
+msgid "Mass of the dish"
+msgstr "Масса блюда"
+
+#: .\main\models.py:8 .\main\models.py:23 .\main\models.py:38
+#: .\main\models.py:53
+msgid "The cost of the dish"
+msgstr "Стоимость блюда"
+
+#: .\main\models.py:9 .\main\models.py:24 .\main\models.py:39
+#: .\main\models.py:54
+msgid "Link to the image"
+msgstr "Ссылка на изображение"
+
+#: .\main\templates\main\about.html:22
+msgid ""
+"Mint Platinum is an ideal place to relax with quality service, food and "
+"hookahs"
+msgstr ""
+"Мята Platinum — идеальное место для отдыха с качественным обслуживанием, "
+"едой и кальянами"
+
+#: .\main\templates\main\about.html:26
+msgid "Premium hookahs"
+msgstr "Премиальные кальяны"
+
+#: .\main\templates\main\about.html:27
+msgid ""
+"More than 10 types of smoking mixtures for every taste and strength: from "
+"Chabako to Tangiers. Only premium brands of hookahs Hoob and Geometria."
+msgstr ""
+"Более 10 видов курительных смесей на любой вкус и крепость: от Из Чабако в "
+"Танжер. Только кальяны премиум-класса Hoob и Geometria."
+
+#: .\main\templates\main\about.html:28
+msgid ""
+"Each employee of our team has many years of experience in the hookah "
+"business, we will definitely be able to score what you want, unusual "
+"novelties or good old classics."
+msgstr ""
+"Каждый сотрудник нашей команды имеет многолетний опыт работы в кальянном "
+"бизнесе мы обязательно сможем забить то, что вы хотите, необычноновинки или "
+"старая добрая классика."
+
+#: .\main\templates\main\about.html:42
+#, fuzzy
+#| msgid "Dishes in the author's execution"
+msgid "Dishes in the authors execution"
+msgstr "Блюда в авторском исполнении"
+
+#: .\main\templates\main\about.html:43
+msgid "We will please any gastronomic preferences"
+msgstr "Угодим любым гастрономическим предпочтениям"
+
+#: .\main\templates\main\about.html:44
+msgid ""
+"The kitchen offers Italian pastas, salads, burgers, Japanese dishes and much "
+"more."
+msgstr ""
+"Кухня предлагает итальянские пасты, салаты, бургеры, блюда японской кухни и "
+"многое другое."
+
+#: .\main\templates\main\about.html:47 .\main\templates\main\about.html:78
+#: .\main\templates\main\rent_a_table.html:25
+msgid "View our menu"
+msgstr "Просмотреть наше меню"
+
+#: .\main\templates\main\about.html:74
+msgid "Alcoholic beverages of the best quality"
+msgstr "Алкогольные напитки лучшего качества"
+
+#: .\main\templates\main\about.html:75
+msgid ""
+"A bar with original cocktails, teas, fruit smoothies. We pour more than 17 "
+"types of wines and 10 types of alcoholic beverages of different strength."
+msgstr ""
+"Бар с авторскими коктейлями, чаями, фруктовыми смузи. Наливаем более 17 "
+"видов вин и 10 видов алкогольных напитков разной крепости."
+
+#: .\main\templates\main\about.html:113
+msgid "Frequent performances by famous artists and DJs"
+msgstr "Частые выступления известных артистов и ди-джеев"
+
+#: .\main\templates\main\about.html:114
+#, fuzzy
+#| msgid ""
+#| "We often invite famous Moscow artists and DJs for your holiday in the "
+#| "hookah bar."
+msgid ""
+"We often invite famous Moscow artists and DJs for your holiday in a hookah "
+"bar."
+msgstr ""
+"Мы часто приглашаем известных артистов Москвы и диджеев для вашего отдыха в "
+"кальянной."
+
+#: .\main\templates\main\about.html:126
+msgid "Our contacts"
+msgstr "Наши контакты"
+
+#: .\main\templates\main\about.html:127
+msgid "Address:"
+msgstr "Адрес:"
+
+#: .\main\templates\main\about.html:128
+msgid "Moscow, M. Dubrovka str. 1-ya Mashinostroeniya 10, fl.2"
+msgstr "Москва, м. Дубровка ул. 1-я Машиностроения 10, эт.2"
+
+#: .\main\templates\main\about.html:129
+msgid "Operating mode"
+msgstr "Режим работы"
+
+#: .\main\templates\main\about.html:130
+msgid "Sun-Thu 12:00-01:00 Fri-Sat 12:00-03:00"
+msgstr "Вс-Чт 12:00-01:00 Пт-Сб 12:00-03:00"
+
+#: .\main\templates\main\about.html:131
+msgid "Telephone:"
+msgstr "Телефон:"
+
+#: .\main\templates\main\gallery.html:15
+msgid "Our Gallery"
+msgstr "Наша галерея"
+
+#: .\main\templates\main\index.html:17
+msgid "Restaurant with authors cuisine, wide bar menu and hookahs"
+msgstr "Ресторан с авторской кухней, широкой барной картой и кальянами"
+
+#: .\main\templates\main\index.html:18
+msgid ""
+"A stylish and cozy place to relax in Moscow for 100 people with an "
+"atmosphere in which everyone will feel comfortable"
+msgstr ""
+"Стильное и уютное место для отдыха в Москве на 100 персон с атмосферой, в "
+"которй будет комфортно каждому"
+
+#: .\main\templates\main\index.html:22 .\main\templates\main\layout.html:24
+msgid "Book a table"
+msgstr "Забронировать стол"
+
+#: .\main\templates\main\index.html:27
+msgid "More about the restaurant"
+msgstr "Подробнее о ресторане"
+
+#: .\main\templates\main\layout.html:21
+#, fuzzy
+#| msgid "Home page"
+msgid "Home"
+msgstr "Домашняя страница"
+
+#: .\main\templates\main\layout.html:22
+msgid "About"
+msgstr "О нас"
+
+#: .\main\templates\main\layout.html:23
+msgid "Menu"
+msgstr "Меню"
+
+#: .\main\templates\main\layout.html:25
+msgid "Gallery"
+msgstr "Галерея"
+
+#: .\main\templates\main\menu.html:20
+msgid "Salads"
+msgstr "Салаты"
+
+#: .\main\templates\main\menu.html:46
+msgid "Soups and side dishes"
+msgstr "Супы и гарниры"
+
+#: .\main\templates\main\menu.html:72
+msgid "Hot dishes"
+msgstr "Горячие блюда"
+
+#: .\main\templates\main\menu.html:98
+msgid "Drinks"
+msgstr "Напитки"
+
+#: .\main\templates\main\rent_a_table.html:21
+msgid "Book a seat in the hall right now!"
+msgstr "Забронируйте место в зале прямо сейчас!"
+
+#: .\main\templates\main\rent_a_table.html:22
+msgid ""
+"Cozy areas with a PS5 game console, the highest-rated games, a variety of "
+"board games, including backgammon, for a fun pastime with friends, as well "
+"as broadcasts of the top sports events in the world"
+msgstr ""
+"Уютные зоны с игровой приставкой PS5, играми с самым высоким рейтингом, "
+"разнообразными настольными играми, включая нарды, для веселого "
+"времяпрепровождения с друзьями, а также как трансляции главных спортивных "
+"событий в мире"
+
+#: .\main\templates\main\rent_a_table.html:32
+msgid "Enter your name"
+msgstr "Введите Ваше имя"
+
+#: .\main\templates\main\rent_a_table.html:34
+msgid "Select the number of guests"
+msgstr "Выберите количество гостей"
+
+#: .\main\templates\main\rent_a_table.html:39
+msgid "Select the date of the visit"
+msgstr "Выберите дату посещения"
+
+#: .\main\templates\main\rent_a_table.html:41
+msgid "Write the approximate time of the visit"
+msgstr "Напишите примерное время посещени"
+
+#: .\main\templates\main\rent_a_table.html:43
+msgid "Enter your phone number"
+msgstr "Введите Ваш номер телефона"
+
+#: .\main\templates\main\rent_a_table.html:46
+msgid "To book"
+msgstr "Забронировать"
+
+#~ msgid "Restaurant with author"
+#~ msgstr "Ресторан с авторским"

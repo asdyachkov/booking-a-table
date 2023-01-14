@@ -10,20 +10,21 @@ active
 
 {% block content %}
 {% load static %}
+{% load i18n %}
 <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
 <div class="container">
     <div class="right-block">
-        <h1 class="main-h1">Ресторан с авторской кухней, широкой барной картой и кальянами</h1>
-        <p><b>Стильное и уютное место</b> для отдыха в Москве на 100 персон с атмосферой, в которй будет комфортно каждому</p>
+        <h1 class="main-h1">{% trans 'Restaurant with authors cuisine, wide bar menu and hookahs' %}</h1>
+        <p>{% trans 'A stylish and cozy place to relax in Moscow for 100 people with an atmosphere in which everyone will feel comfortable' %}</p>
         <div class="main-buttons">
             <a href="/rent_a_table">
                 <div class="btn rent-button">
-                    <span>Забронировать стол</span>
+                    <span>{% trans 'Book a table' %}</span>
                 </div>
             </a>
             <a href="/about">
                 <div class="btn about-button">
-                    <span>Подробнее о ресторане</span>
+                    <span>{% trans 'More about the restaurant' %}</span>
                 </div>
             </a>
         </div>
