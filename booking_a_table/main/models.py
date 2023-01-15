@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from simple_history.models import HistoricalRecords
 
 
 class Salats(models.Model):
@@ -7,6 +8,7 @@ class Salats(models.Model):
     weight = models.IntegerField(verbose_name=_('Mass of the dish'))
     cost = models.IntegerField(verbose_name=_('The cost of the dish'))
     photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.title
@@ -22,6 +24,7 @@ class HotDishes(models.Model):
     weight = models.IntegerField(verbose_name=_('Mass of the dish'))
     cost = models.IntegerField(verbose_name=_('The cost of the dish'))
     photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.title
@@ -37,6 +40,7 @@ class SideDishesAndSoups(models.Model):
     weight = models.IntegerField(verbose_name=_('Mass of the dish'))
     cost = models.IntegerField(verbose_name=_('The cost of the dish'))
     photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.title
@@ -52,6 +56,7 @@ class Drinks(models.Model):
     weight = models.IntegerField(verbose_name=_('Mass of the dish'))
     cost = models.IntegerField(verbose_name=_('The cost of the dish'))
     photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.title
@@ -68,6 +73,7 @@ class RentATable(models.Model):
     date = models.DateField('Дата прихода гостей')
     time = models.TimeField('Время прихода гостей')
     phone_number = models.CharField('Номер телефона клиента', max_length=16)
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.phone_number
@@ -80,6 +86,7 @@ class RentATable(models.Model):
 
 class PhotoLinks(models.Model):
     link = models.CharField('Ссылка на фото', max_length=250)
+    history = HistoricalRecords()
 
     def __str__(self):
         return 'Ссылка'

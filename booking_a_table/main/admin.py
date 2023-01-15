@@ -2,11 +2,12 @@ from django.contrib import admin
 from django.contrib.admin import AdminSite
 from django.utils.safestring import mark_safe
 from modeltranslation.admin import TranslationAdmin
+from simple_history.admin import SimpleHistoryAdmin
 
 from .models import Salats, HotDishes, SideDishesAndSoups, Drinks, RentATable, PhotoLinks
 
 
-class SalatsAdmin(TranslationAdmin):
+class SalatsForAdmin(TranslationAdmin):
     list_display = ('title', 'weight', 'cost', 'get_html_photo')
     list_display_links = ('title', 'get_html_photo')
     search_fields = ('title', 'cost')
@@ -22,7 +23,11 @@ class SalatsAdmin(TranslationAdmin):
     get_html_photo.short_description = "Изображение"
 
 
-class HotDishesAdmin(TranslationAdmin):
+class SalatsAdmin(SalatsForAdmin, SimpleHistoryAdmin):
+    pass
+
+
+class HotDishesForAdmin(TranslationAdmin):
     list_display = ('title', 'weight', 'cost', 'get_html_photo')
     list_display_links = ('title', 'get_html_photo')
     search_fields = ('title', 'cost')
@@ -37,8 +42,10 @@ class HotDishesAdmin(TranslationAdmin):
 
     get_html_photo.short_description = "Изображение"
 
+class HotDishesAdmin(HotDishesForAdmin, SimpleHistoryAdmin):
+    pass
 
-class RentATableAdmin(admin.ModelAdmin):
+class RentATableForAdmin(admin.ModelAdmin):
     list_display = ('client_name', 'clients_count', 'date', 'time', 'phone_number')
     list_display_links = ('client_name', 'phone_number')
     search_fields = ('client_name', 'clients_count', 'phone_number')
@@ -46,7 +53,11 @@ class RentATableAdmin(admin.ModelAdmin):
     list_filter = ('clients_count', 'date')
 
 
-class SideDishesAndSoupsAdmin(TranslationAdmin):
+class RentATableAdmin(RentATableForAdmin, SimpleHistoryAdmin):
+    pass
+
+
+class SideDishesAndSoupsForAdmin(TranslationAdmin):
     list_display = ('title', 'weight', 'cost', 'get_html_photo')
     list_display_links = ('title', 'get_html_photo')
     search_fields = ('title', 'cost')
@@ -61,8 +72,10 @@ class SideDishesAndSoupsAdmin(TranslationAdmin):
 
     get_html_photo.short_description = "Изображение"
 
+class SideDishesAndSoupsAdmin(SideDishesAndSoupsForAdmin, SimpleHistoryAdmin):
+    pass
 
-class DrinksAdmin(TranslationAdmin):
+class DrinksForAdmin(TranslationAdmin):
     list_display = ('title', 'weight', 'cost', 'get_html_photo')
     list_display_links = ('title', 'get_html_photo')
     search_fields = ('title', 'cost')
@@ -77,8 +90,10 @@ class DrinksAdmin(TranslationAdmin):
 
     get_html_photo.short_description = "Изображение"
 
+class DrinksAdmin(DrinksForAdmin, SimpleHistoryAdmin):
+    pass
 
-class PhotoLinksAdmin(admin.ModelAdmin):
+class PhotoLinksForAdmin(admin.ModelAdmin):
     list_display = ('get_html_photo',)
     list_display_links = ('get_html_photo',)
     readonly_fields = ('get_html_photo',)
@@ -90,6 +105,8 @@ class PhotoLinksAdmin(admin.ModelAdmin):
 
     get_html_photo.short_description = "Изображение"
 
+class PhotoLinksAdmin(PhotoLinksForAdmin, SimpleHistoryAdmin):
+    pass
 
 AdminSite.site_title = "Админ-панель бронирование столиков"
 AdminSite.site_header = "Админ-панель бронирование столиков"
