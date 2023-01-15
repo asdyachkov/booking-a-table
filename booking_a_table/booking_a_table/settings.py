@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'simple_history',
+    'import_export'
 ]
 
 MIDDLEWARE = [

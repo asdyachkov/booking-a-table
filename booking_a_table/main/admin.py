@@ -3,8 +3,22 @@ from django.contrib.admin import AdminSite
 from django.utils.safestring import mark_safe
 from modeltranslation.admin import TranslationAdmin
 from simple_history.admin import SimpleHistoryAdmin
+from import_export import resources
+from import_export.admin import ImportExportModelAdmin
 
 from .models import Salats, HotDishes, SideDishesAndSoups, Drinks, RentATable, PhotoLinks
+
+
+class SalatsResource(resources.ModelResource):
+
+    class Meta:
+        model = Salats
+        fields = ('id', 'title', 'weight', 'cost', 'photo')
+        exclude = ('imported',)
+
+
+class SalatsForAdminSecond(ImportExportModelAdmin):
+    resource_class = SalatsResource
 
 
 class SalatsForAdmin(TranslationAdmin):
@@ -23,8 +37,20 @@ class SalatsForAdmin(TranslationAdmin):
     get_html_photo.short_description = "Изображение"
 
 
-class SalatsAdmin(SalatsForAdmin, SimpleHistoryAdmin):
+class SalatsAdmin(SalatsForAdmin, SimpleHistoryAdmin, SalatsForAdminSecond):
     pass
+
+
+class HotDishesResource(resources.ModelResource):
+
+    class Meta:
+        model = HotDishes
+        fields = ('id', 'title', 'weight', 'cost', 'photo')
+        exclude = ('imported',)
+
+
+class HotDishesForAdminSecond(ImportExportModelAdmin):
+    resource_class = HotDishesResource
 
 
 class HotDishesForAdmin(TranslationAdmin):
@@ -42,8 +68,21 @@ class HotDishesForAdmin(TranslationAdmin):
 
     get_html_photo.short_description = "Изображение"
 
-class HotDishesAdmin(HotDishesForAdmin, SimpleHistoryAdmin):
+class HotDishesAdmin(HotDishesForAdmin, SimpleHistoryAdmin, HotDishesForAdminSecond):
     pass
+
+
+class RentATableResource(resources.ModelResource):
+
+    class Meta:
+        model = RentATable
+        fields = ('id', 'client_name', 'clients_count', 'date', 'time', 'phone_number')
+        exclude = ('imported',)
+
+
+class RentATableForAdminSecond(ImportExportModelAdmin):
+    resource_class = RentATableResource
+
 
 class RentATableForAdmin(admin.ModelAdmin):
     list_display = ('client_name', 'clients_count', 'date', 'time', 'phone_number')
@@ -53,8 +92,20 @@ class RentATableForAdmin(admin.ModelAdmin):
     list_filter = ('clients_count', 'date')
 
 
-class RentATableAdmin(RentATableForAdmin, SimpleHistoryAdmin):
+class RentATableAdmin(RentATableForAdmin, SimpleHistoryAdmin, RentATableForAdminSecond):
     pass
+
+
+class SideDishesAndSoupsResource(resources.ModelResource):
+
+    class Meta:
+        model = SideDishesAndSoups
+        fields = ('id', 'title', 'weight', 'cost', 'photo')
+        exclude = ('imported',)
+
+
+class SideDishesAndSoupsForAdminSecond(ImportExportModelAdmin):
+    resource_class = SideDishesAndSoupsResource
 
 
 class SideDishesAndSoupsForAdmin(TranslationAdmin):
@@ -72,8 +123,21 @@ class SideDishesAndSoupsForAdmin(TranslationAdmin):
 
     get_html_photo.short_description = "Изображение"
 
-class SideDishesAndSoupsAdmin(SideDishesAndSoupsForAdmin, SimpleHistoryAdmin):
+class SideDishesAndSoupsAdmin(SideDishesAndSoupsForAdmin, SimpleHistoryAdmin, SideDishesAndSoupsForAdminSecond):
     pass
+
+
+class DrinksResource(resources.ModelResource):
+
+    class Meta:
+        model = Drinks
+        fields = ('id', 'title', 'weight', 'cost', 'photo')
+        exclude = ('imported',)
+
+
+class DrinksForAdminSecond(ImportExportModelAdmin):
+    resource_class = DrinksResource
+
 
 class DrinksForAdmin(TranslationAdmin):
     list_display = ('title', 'weight', 'cost', 'get_html_photo')
@@ -90,8 +154,22 @@ class DrinksForAdmin(TranslationAdmin):
 
     get_html_photo.short_description = "Изображение"
 
-class DrinksAdmin(DrinksForAdmin, SimpleHistoryAdmin):
+
+class DrinksAdmin(DrinksForAdmin, SimpleHistoryAdmin, DrinksForAdminSecond):
     pass
+
+
+class PhotoLinksResource(resources.ModelResource):
+
+    class Meta:
+        model = PhotoLinks
+        fields = ('id', 'link')
+        exclude = ('imported',)
+
+
+class PhotoLinksForAdminSecond(ImportExportModelAdmin):
+    resource_class = PhotoLinksResource
+
 
 class PhotoLinksForAdmin(admin.ModelAdmin):
     list_display = ('get_html_photo',)
@@ -105,8 +183,10 @@ class PhotoLinksForAdmin(admin.ModelAdmin):
 
     get_html_photo.short_description = "Изображение"
 
-class PhotoLinksAdmin(PhotoLinksForAdmin, SimpleHistoryAdmin):
+
+class PhotoLinksAdmin(PhotoLinksForAdmin, SimpleHistoryAdmin, PhotoLinksForAdminSecond):
     pass
+
 
 AdminSite.site_title = "Админ-панель бронирование столиков"
 AdminSite.site_header = "Админ-панель бронирование столиков"
