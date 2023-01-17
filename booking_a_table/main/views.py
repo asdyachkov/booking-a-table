@@ -1,6 +1,11 @@
+from django.forms import model_to_dict
 from django.shortcuts import render, redirect
+from rest_framework import generics
+from rest_framework.response import Response
+
 from .models import Salats, SideDishesAndSoups, HotDishes, Drinks, PhotoLinks
 from .forms import RentATableForm
+from .serializers import SalatsSerializer
 
 
 def index(request):
@@ -41,3 +46,19 @@ def contacts(request):
 def gallery(request):
     photos = PhotoLinks.objects.all()
     return render(request, 'main/gallery.html', {'photos': photos})
+
+
+class SalatsAPIView(generics.ListAPIView):
+    # queryset = Salats.objects.all()
+    # serializer_class = SalatsSerializer
+    def post(self, request):
+        serializer = SalatsSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        salat_new = Salats.objects.create(
+            title=request.data['title'],
+            weight=request.data['weight'],
+            cost=request.data['cost'],
+            photo=request.data['photo'],
+        )
+
+        return Response({'salat': SalatsSerializer(salat_new).data})

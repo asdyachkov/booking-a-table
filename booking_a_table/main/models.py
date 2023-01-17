@@ -8,7 +8,7 @@ class Salats(models.Model):
     weight = models.IntegerField(verbose_name=_('Mass of the dish'))
     cost = models.IntegerField(verbose_name=_('The cost of the dish'))
     photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
-    history = HistoricalRecords()
+    history = HistoricalRecords(excluded_fields=['title_ru', 'title_en'])
 
     def __str__(self):
         return self.title
@@ -24,7 +24,7 @@ class HotDishes(models.Model):
     weight = models.IntegerField(verbose_name=_('Mass of the dish'))
     cost = models.IntegerField(verbose_name=_('The cost of the dish'))
     photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
-    history = HistoricalRecords()
+    history = HistoricalRecords(excluded_fields=['title_ru', 'title_en'])
 
     def __str__(self):
         return self.title
@@ -40,7 +40,7 @@ class SideDishesAndSoups(models.Model):
     weight = models.IntegerField(verbose_name=_('Mass of the dish'))
     cost = models.IntegerField(verbose_name=_('The cost of the dish'))
     photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
-    history = HistoricalRecords()
+    history = HistoricalRecords(excluded_fields=['title_ru', 'title_en'])
 
     def __str__(self):
         return self.title
@@ -56,7 +56,7 @@ class Drinks(models.Model):
     weight = models.IntegerField(verbose_name=_('Mass of the dish'))
     cost = models.IntegerField(verbose_name=_('The cost of the dish'))
     photo = models.TextField(verbose_name=_('Link to the image'), blank=True)
-    history = HistoricalRecords()
+    history = HistoricalRecords(excluded_fields=['title_ru', 'title_en'])
 
     def __str__(self):
         return self.title
