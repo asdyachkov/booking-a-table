@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'simple_history',
     'import_export',
-    'rest_framework'
+    'rest_framework',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
@@ -130,6 +131,12 @@ MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
 LOCALE_PATHS = [
     BASE_DIR / 'locale'
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 5,
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
 
 
 # Static files (CSS, JavaScript, Images)

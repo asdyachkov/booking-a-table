@@ -8,11 +8,8 @@ def valid_photo(photo):
 
 
 class SalatsSerializer(serializers.ModelSerializer):
-    title = serializers.CharField(max_length=100)
-    weight = serializers.IntegerField()
-    cost = serializers.IntegerField()
     photo = serializers.CharField(validators=[valid_photo])
 
     class Meta:
         model = Salats
-        fields = ('id', 'title', 'weight', 'cost', 'photo')
+        fields = '__all__'
