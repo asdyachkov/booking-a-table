@@ -81,7 +81,7 @@ class SalatsViewSet(viewsets.ModelViewSet):
 
     @action(methods=['get'], detail=True)
     def qrent(self, request, pk=None):
-        rents = RentATable.objects.filter(Q(client_name__startswith=pk) | Q(phone_number__icontains=pk))
+        rents = RentATable.objects.filter(Q(client_name__icontains=pk) | Q(phone_number__icontains=pk))
         return Response({'rents': [(rent.client_name, rent.phone_number) for rent in rents]})
 
     @action(methods=['get'], detail=False)
